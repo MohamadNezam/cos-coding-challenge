@@ -1,0 +1,89 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>authApi.spec.ts</title>
+      <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" type="text/css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/mode/javascript/javascript.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.css" type="text/css" rel="stylesheet">
+<script src="..\..\..\..\..\assets\source-file.js" type="text/javascript" charset="utf-8"></script>
+<link href="..\..\..\..\..\assets\source-file.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+    <div style="margin-top:3em" class="ui container"><h1 class="ui header"><a href="..\..\..\..\..\index.html">TypeScript coverage report</a></h1><table style="margin-top:2em" class="ui celled table"><thead class=""><tr class=""><th class="">Filename</th><th class="">Percent</th><th class="">Threshold</th><th class="">Total</th><th class="">Covered</th><th class="">Uncovered</th></tr></thead><tbody class=""><tr class="negative"><td class="">src\app\tests\ulils\authApi.spec.ts</td><td class="">62.62%</td><td class="">80%</td><td class="">107</td><td class="">67</td><td class="">40</td></tr></tbody></table><textarea id="editor" readonly="" style="margin-top:3em">var chai = require(&quot;chai&quot;);
+var expect = chai.expect;
+//var sinon = require(&quot;sinon&quot;);
+var nock = require(&quot;nock&quot;);
+
+import { AuthAPI } from &quot;../../utils/AuthAPI&quot;;
+
+describe(&quot;WE are going to test AuthAPI.ts&quot;, function () {
+  const authApiObj = new AuthAPI();
+  var email = authApiObj.buyerUserEmail;
+  beforeEach((done) =&gt; {
+    nock.restore();
+    nock.cleanAll();
+    nock.activate();
+    done();
+  });
+
+  describe(&quot;testing checkIfEmailExist method&quot;, function () {
+    it(&quot;if user has credentials&quot;, async function () {
+      const url = &quot;/v1/authentication/&quot; + email + &quot;/registered&quot;;
+      nock(authApiObj.baseURL).persist().get(url).reply(204, {});
+      const result = await authApiObj.checkIfEmailExist(email);
+      //console.log(result);
+      expect(result.status).to.be.equal(204);
+    });
+
+    it(&quot;if no user found with the provided e-mail address&quot;, async function () {
+      const url = &quot;/v1/authentication/&quot; + email + &quot;/registered&quot;;
+      var fail = false;
+      nock(authApiObj.baseURL).get(url).reply(404, {});
+
+      try {
+        await authApiObj.checkIfEmailExist(email);
+        fail = true;
+      } catch (e) {}
+      if (fail) throw Error(&quot;nothing&quot;);
+      //if (fail === false) throw console.error();
+
+      //console.log(result);
+    });
+  });
+
+  describe(&quot;testing sendAuthenticationRequest method&quot;, function () {
+    it(&quot;Create authentication token for given credentials.&quot;, async function () {
+      const url = `/v1/authentication/${email}`;
+      const responseBody = {
+        token:
+          &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IlRPS0VOLWJ1eWVyLWNoYWxsZW5nZUBjYXJvbnNhbGUuZGUiLCJ1c2VyVXVpZCI6IjA1NGQ0NTc3LTY5YTAtNGU0Yi04ZTVlLTk3NWJjZjhjNjJjNyIsImlhdCI6MTYzNTU5NDYxNiwiZXhwIjoxNjM1ODUzODE2fQ.Y_jmUepTWfRghZq48w_LYnRpY2eNPpHCtfAKRaAqE82j1O9NqXTWxvZR5AKPKei8L854M90uqPZp2nfQy2V8sMBNYBPO8egoDgEsluuvYkun2l5CI-os8CQRj36QxjLireBEF1rFGw_HOZh5rvqIKHIUVeK99P_g_WGnOucF0ew&quot;,
+        authenticated: true,
+        userId: &quot;buyer-challenge@caronsale.de&quot;,
+        internalUserId: 2324,
+        internalUserUUID: &quot;054d4577-69a0-4e4b-8e5e-975bcf8c62c7&quot;,
+        type: 1,
+        privileges: &quot;{SALESMAN_USER}&quot;,
+      };
+      nock(authApiObj.baseURL).put(url).reply(201, responseBody);
+      const result = await authApiObj.sendAuthenticationRequest();
+
+      expect(result.status).to.be.equal(201);
+      expect(result.data).to.have.property(&quot;token&quot;);
+      //expect(result.data).to.have.property(&quot;authenticated&quot;).equal(false);
+    });
+  });
+
+  describe(&quot;testing checkAuthToken method&quot;, function () {
+    it(&quot;should returm auth token &quot;, async function () {
+      const result = await authApiObj.getAuthToken();
+      expect(result.token).to.be.not.equal(null);
+    });
+  });
+});
+</textarea><pre id="annotations" style="display:none">[{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:0,&quot;character&quot;:4,&quot;text&quot;:&quot;chai&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:1,&quot;character&quot;:4,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:1,&quot;character&quot;:13,&quot;text&quot;:&quot;chai&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:1,&quot;character&quot;:18,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:3,&quot;character&quot;:4,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:11,&quot;character&quot;:4,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:11,&quot;character&quot;:9,&quot;text&quot;:&quot;restore&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:12,&quot;character&quot;:4,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:12,&quot;character&quot;:9,&quot;text&quot;:&quot;cleanAll&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:13,&quot;character&quot;:4,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:13,&quot;character&quot;:9,&quot;text&quot;:&quot;activate&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:20,&quot;character&quot;:6,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:20,&quot;character&quot;:31,&quot;text&quot;:&quot;persist&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:20,&quot;character&quot;:41,&quot;text&quot;:&quot;get&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:20,&quot;character&quot;:50,&quot;text&quot;:&quot;reply&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:23,&quot;character&quot;:6,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:23,&quot;character&quot;:28,&quot;text&quot;:&quot;to&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:23,&quot;character&quot;:31,&quot;text&quot;:&quot;be&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:23,&quot;character&quot;:34,&quot;text&quot;:&quot;equal&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:29,&quot;character&quot;:6,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:29,&quot;character&quot;:31,&quot;text&quot;:&quot;get&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:29,&quot;character&quot;:40,&quot;text&quot;:&quot;reply&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:34,&quot;character&quot;:15,&quot;text&quot;:&quot;e&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:55,&quot;character&quot;:6,&quot;text&quot;:&quot;nock&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:55,&quot;character&quot;:31,&quot;text&quot;:&quot;put&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:55,&quot;character&quot;:40,&quot;text&quot;:&quot;reply&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:58,&quot;character&quot;:6,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:58,&quot;character&quot;:28,&quot;text&quot;:&quot;to&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:58,&quot;character&quot;:31,&quot;text&quot;:&quot;be&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:58,&quot;character&quot;:34,&quot;text&quot;:&quot;equal&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:59,&quot;character&quot;:6,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:59,&quot;character&quot;:20,&quot;text&quot;:&quot;data&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:59,&quot;character&quot;:26,&quot;text&quot;:&quot;to&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:59,&quot;character&quot;:29,&quot;text&quot;:&quot;have&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:59,&quot;character&quot;:34,&quot;text&quot;:&quot;property&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:67,&quot;character&quot;:6,&quot;text&quot;:&quot;expect&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:67,&quot;character&quot;:27,&quot;text&quot;:&quot;to&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:67,&quot;character&quot;:30,&quot;text&quot;:&quot;be&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:67,&quot;character&quot;:33,&quot;text&quot;:&quot;not&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\tests\\ulils\\authApi.spec.ts&quot;,&quot;line&quot;:67,&quot;character&quot;:37,&quot;text&quot;:&quot;equal&quot;,&quot;kind&quot;:1}]</pre></div>
+    <p class="footer-text">TypeScript Coverage Report generated by <a href="https://github.com/plantain-00/type-coverage">type-coverage</a> and <a href="https://github.com/alexcanessa/typescript-coverage-report">typescript-coverage-report</a> at Sat, 30 Oct 2021 16:43:00 GMT</p>
+    </body>
+  </html>
+  

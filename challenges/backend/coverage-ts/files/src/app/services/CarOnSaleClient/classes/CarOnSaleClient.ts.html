@@ -1,0 +1,73 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>CarOnSaleClient.ts</title>
+      <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" type="text/css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/mode/javascript/javascript.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.css" type="text/css" rel="stylesheet">
+<script src="..\..\..\..\..\..\assets\source-file.js" type="text/javascript" charset="utf-8"></script>
+<link href="..\..\..\..\..\..\assets\source-file.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+    <div style="margin-top:3em" class="ui container"><h1 class="ui header"><a href="..\..\..\..\..\..\index.html">TypeScript coverage report</a></h1><table style="margin-top:2em" class="ui celled table"><thead class=""><tr class=""><th class="">Filename</th><th class="">Percent</th><th class="">Threshold</th><th class="">Total</th><th class="">Covered</th><th class="">Uncovered</th></tr></thead><tbody class=""><tr class="positive"><td class="">src\app\services\CarOnSaleClient\classes\CarOnSaleClient.ts</td><td class="">81.33%</td><td class="">80%</td><td class="">75</td><td class="">61</td><td class="">14</td></tr></tbody></table><textarea id="editor" readonly="" style="margin-top:3em">import { injectable } from &quot;inversify&quot;;
+import { IBuyerAuctionView } from &quot;../../../types/buyerAuctionView.type&quot;;
+import { IGeneralBusinessTerms } from &quot;../../../types/generalBusinessTerms.type&quot;;
+import { ICarOnSaleClient } from &quot;../interface/ICarOnSaleClient&quot;;
+import { AuthAPI } from &quot;../../../utils/AuthAPI&quot;;
+import axios from &quot;axios&quot;;
+import { IAuthenticationResult } from &quot;../../../types/authenticationResult.type&quot;;
+//import staticJsondata from &quot;../../../runningAuction.json&quot;;
+//import http from &quot;../../../utils/http-common&quot;;
+@injectable()
+export class CarOnSaleClient implements ICarOnSaleClient {
+  async getRunningAuctions(): Promise&lt;IBuyerAuctionView[]&gt; {
+    const authAPI = new AuthAPI();
+
+    // get auth token to be able to access runnin auctin
+    const authenticationResult: IAuthenticationResult =
+      await authAPI.getAuthToken();
+    /**
+     * The result contains a &quot;userId&quot; and a &quot;token&quot; field that have to be set as &quot;userid&quot; / &quot;authtoken&quot;
+     * HTTP header in further requests.
+     */
+
+    const http = axios.create({
+      baseURL: authAPI.baseURL,
+      headers: {
+        userid: `${authenticationResult.userId}`,
+        authtoken: `${authenticationResult.token}`,
+      },
+    });
+
+    const response = await http.get(&quot;/v2/auction/buyer/?count=false&quot;);
+
+    //TODO change staticJsondata with response
+    const buyerAuctionView: IBuyerAuctionView[] = [];
+
+    for (const element of response.data.items) {
+      buyerAuctionView.push({
+        id: element.id,
+        label: element.label,
+        numBids: element.numBids,
+        currentHighestBidValue: element.currentHighestBidValue,
+        minimumRequiredAsk: element.minimumRequiredAsk,
+      });
+    }
+    return buyerAuctionView;
+  }
+
+  // Get current version of the general business terms.
+  async getGeneralBusinessTerms(): Promise&lt;IGeneralBusinessTerms&gt; {
+    const authAPI = new AuthAPI();
+    const http = axios.create({ baseURL: authAPI.baseURL });
+    const response = await http.get(&quot;/v1/public/general-business-terms&quot;);
+    return response.data;
+  }
+}
+</textarea><pre id="annotations" style="display:none">[{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:35,&quot;character&quot;:15,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:37,&quot;character&quot;:12,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:37,&quot;character&quot;:20,&quot;text&quot;:&quot;id&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:38,&quot;character&quot;:15,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:38,&quot;character&quot;:23,&quot;text&quot;:&quot;label&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:39,&quot;character&quot;:17,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:39,&quot;character&quot;:25,&quot;text&quot;:&quot;numBids&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:40,&quot;character&quot;:32,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:40,&quot;character&quot;:40,&quot;text&quot;:&quot;currentHighestBidValue&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:41,&quot;character&quot;:28,&quot;text&quot;:&quot;element&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:41,&quot;character&quot;:36,&quot;text&quot;:&quot;minimumRequiredAsk&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:35,&quot;character&quot;:35,&quot;text&quot;:&quot;data&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:35,&quot;character&quot;:40,&quot;text&quot;:&quot;items&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts&quot;,&quot;line&quot;:52,&quot;character&quot;:20,&quot;text&quot;:&quot;data&quot;,&quot;kind&quot;:1}]</pre></div>
+    <p class="footer-text">TypeScript Coverage Report generated by <a href="https://github.com/plantain-00/type-coverage">type-coverage</a> and <a href="https://github.com/alexcanessa/typescript-coverage-report">typescript-coverage-report</a> at Sat, 30 Oct 2021 16:43:00 GMT</p>
+    </body>
+  </html>
+  

@@ -1,0 +1,821 @@
+{
+  "fileCounts": {},
+  "anys": [
+    {
+      "file": "src\\app\\AuctionMonitorApp.ts",
+      "line": 37,
+      "character": 46,
+      "text": "e",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\AuctionMonitorApp.ts",
+      "line": 36,
+      "character": 13,
+      "text": "e",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 61,
+      "character": 8,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 64,
+      "character": 6,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 65,
+      "character": 43,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 66,
+      "character": 51,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 69,
+      "character": 6,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 70,
+      "character": 43,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 71,
+      "character": 51,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\utils\\AuthAPI.ts",
+      "line": 67,
+      "character": 13,
+      "text": "err",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 35,
+      "character": 15,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 37,
+      "character": 12,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 37,
+      "character": 20,
+      "text": "id",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 38,
+      "character": 15,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 38,
+      "character": 23,
+      "text": "label",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 39,
+      "character": 17,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 39,
+      "character": 25,
+      "text": "numBids",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 40,
+      "character": 32,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 40,
+      "character": 40,
+      "text": "currentHighestBidValue",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 41,
+      "character": 28,
+      "text": "element",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 41,
+      "character": 36,
+      "text": "minimumRequiredAsk",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 35,
+      "character": 35,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 35,
+      "character": 40,
+      "text": "items",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\services\\CarOnSaleClient\\classes\\CarOnSaleClient.ts",
+      "line": 52,
+      "character": 20,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 4,
+      "character": 4,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 5,
+      "character": 4,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 5,
+      "character": 13,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 5,
+      "character": 18,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 6,
+      "character": 4,
+      "text": "sinon",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 15,
+      "character": 6,
+      "text": "sinon",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 16,
+      "character": 9,
+      "text": "stub",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 17,
+      "character": 9,
+      "text": "callsFake",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 26,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 26,
+      "character": 67,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 26,
+      "character": 70,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 26,
+      "character": 73,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 35,
+      "character": 6,
+      "text": "sinon",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 35,
+      "character": 12,
+      "text": "stub",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 35,
+      "character": 56,
+      "text": "callsFake",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 41,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 41,
+      "character": 21,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 41,
+      "character": 24,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 41,
+      "character": 27,
+      "text": "an",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 42,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 42,
+      "character": 21,
+      "text": "not",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 42,
+      "character": 25,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 42,
+      "character": 28,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\services\\CarOnSaleClient.spec.ts",
+      "line": 42,
+      "character": 31,
+      "text": "an",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 0,
+      "character": 4,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 1,
+      "character": 4,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 1,
+      "character": 13,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 1,
+      "character": 18,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 3,
+      "character": 4,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 11,
+      "character": 4,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 11,
+      "character": 9,
+      "text": "restore",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 12,
+      "character": 4,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 12,
+      "character": 9,
+      "text": "cleanAll",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 13,
+      "character": 4,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 13,
+      "character": 9,
+      "text": "activate",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 20,
+      "character": 6,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 20,
+      "character": 31,
+      "text": "persist",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 20,
+      "character": 41,
+      "text": "get",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 20,
+      "character": 50,
+      "text": "reply",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 23,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 23,
+      "character": 28,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 23,
+      "character": 31,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 23,
+      "character": 34,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 29,
+      "character": 6,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 29,
+      "character": 31,
+      "text": "get",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 29,
+      "character": 40,
+      "text": "reply",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 34,
+      "character": 15,
+      "text": "e",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 55,
+      "character": 6,
+      "text": "nock",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 55,
+      "character": 31,
+      "text": "put",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 55,
+      "character": 40,
+      "text": "reply",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 58,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 58,
+      "character": 28,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 58,
+      "character": 31,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 58,
+      "character": 34,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 59,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 59,
+      "character": 20,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 59,
+      "character": 26,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 59,
+      "character": 29,
+      "text": "have",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 59,
+      "character": 34,
+      "text": "property",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 67,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 67,
+      "character": 27,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 67,
+      "character": 30,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 67,
+      "character": 33,
+      "text": "not",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\authApi.spec.ts",
+      "line": 67,
+      "character": 37,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 4,
+      "character": 4,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 5,
+      "character": 4,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 5,
+      "character": 13,
+      "text": "chai",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 5,
+      "character": 18,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 11,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 11,
+      "character": 38,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 11,
+      "character": 41,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 11,
+      "character": 44,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 12,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 12,
+      "character": 52,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 12,
+      "character": 55,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 12,
+      "character": 58,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 13,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 13,
+      "character": 59,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 13,
+      "character": 62,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 13,
+      "character": 65,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 17,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 17,
+      "character": 38,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 17,
+      "character": 41,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 17,
+      "character": 44,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 18,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 18,
+      "character": 52,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 18,
+      "character": 55,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 18,
+      "character": 58,
+      "text": "equal",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 19,
+      "character": 6,
+      "text": "expect",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 19,
+      "character": 59,
+      "text": "to",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 19,
+      "character": 62,
+      "text": "be",
+      "kind": 1
+    },
+    {
+      "file": "src\\app\\tests\\ulils\\FormattingRunningAuction.spec.ts",
+      "line": 19,
+      "character": 65,
+      "text": "eql",
+      "kind": 1
+    }
+  ],
+  "percentage": 79.96545768566494,
+  "total": 579,
+  "covered": 463,
+  "uncovered": 116
+}
